@@ -40,7 +40,7 @@ const create = (req, res) => {
 const remove = (req, res) => {
   const id = +req.params.id;
 
-  if (typeof id !== 'number') {
+  if (isNaN(id)) {
     res.sendStatus(400);
 
     return;

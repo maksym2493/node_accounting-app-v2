@@ -94,7 +94,7 @@ const create = (req, res) => {
     !title ||
     !category ||
     !note ||
-    !usersService.getById(userId)
+    usersService.getById(userId) === undefined
   ) {
     res.sendStatus(400);
 
